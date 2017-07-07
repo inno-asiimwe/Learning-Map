@@ -10,7 +10,15 @@ class LearningMap:
         pass
 
     def learnt_skill(self, skill_name):
-        pass
+        
+        if isinstance(skill, Skill):
+            if skill.studied :
+                return "Skill already attained"
+            else:
+                skill.studied = True
+        else:
+            raise TypeError("Skill already attained")
+       
 
     def learning_progress(self):
         pass
