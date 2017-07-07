@@ -6,8 +6,6 @@ class LearningMap:
         self.num_learnt_skils = 0
         self.num_skills_not_learnt = 0
 
-
-
     def add_skills(self):
         pass
 
@@ -22,7 +20,3 @@ class LearningMap:
 
     def view_skills_not_learnt(self):
         pass
-
-
-
-
