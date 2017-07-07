@@ -34,6 +34,14 @@ class TestMap(unittest.TestCase):
         studied_skill = Skill('Css')
         self.assertEqual([studied_skill],self.map.view_skills_not_learnt)
 
+    def test_learnt_skill_string_input(self):
+        """Test that skill should be a skill object"""
+        self.assertRaises(TypeError, self.map.learnt_skill, 'name')
+
+    def test_learnt_skill_string_integer_input(self):
+        """Test that skill should be a skill object"""
+        self.assertRaises(TypeError, self.map.learnt_skill, 5)
+
 
 
 if __name__ == '__main__':
