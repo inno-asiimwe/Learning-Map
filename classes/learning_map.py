@@ -16,7 +16,11 @@ class LearningMap:
         pass
 
     def view_skills_learnt(self):
-        pass
+	if len(skills_list) = 0:
+		print("No Skills Learnt")
+	else:
+		for skill in skills_list if Skill.studied == True:
+		return skill
 
     def view_skills_not_learnt(self):
         pass
