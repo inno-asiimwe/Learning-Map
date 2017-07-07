@@ -9,14 +9,31 @@ class LearningMap:
     def add_skill(self,skill_name):
         pass
 
-    def learnt_skill(self, skill_name):
-        pass
+        def learnt_skill(self, skill_name):
 
-    def learning_progress(self):
-        pass
+            if isinstance(skill, Skill):
+                if skill.studied:
+                    return "Skill already attained"
+                else:
+                    skill.studied = True
+            else:
+                raise TypeError("Skill already attained")
 
-    def view_skills_learnt(self):
-        pass
+        def learning_progress(self):
+            pass
 
-    def view_skills_not_learnt(self):
-        pass
+        def view_skills_learnt(self):
+            if len(self.skills_list) = 0:
+                print("No Skills Learnt")
+            else:
+                for skill in self.skills_list:
+                    if skill.studied == True:
+                        return skill
+
+        def view_skills_not_learnt(self):
+            """ returns the skills not learnt """
+            for skill in self.skills_list:
+                if skill.studied:
+                    pass
+                else:
+                    print(skill.name)

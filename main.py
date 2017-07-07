@@ -1,11 +1,6 @@
 """
 Usage:
     (Map) add_skill <skill_name>      
-    (Map) learnt_skill <skill_name>      
-    (Map) learning_progress      
-    (Map) skills_learnt
-    (Map) skills_not_learnt
-          
     (Map) (-i | --interactive)
     (Map) (-h | --help)
 
@@ -52,7 +47,9 @@ def docopt_cmd(func):
     fn.__dict__.update(func.__dict__)
     return fn
 
+
 lp = LearningMap()
+
 
 class LearningMap(cmd.Cmd):
     intro = 'Welcome to THE Learning Map APP!\n'
@@ -71,6 +68,16 @@ class LearningMap(cmd.Cmd):
         """Usage: learnt_skill <skill_name>"""
         skill_name = arg['<skill_name>']
         lp.learnt_skill(skill_name)
+
+    @docopt_cmd
+    def do_learning_progress(self, arg):
+        """Usage: learning_progress"""
+        lp.learning_progress()
+
+    @docopt_cmd
+    def do_skills_learnt(self, arg):
+        """Usage: skills_learnt"""
+        lp.skills_list()
 
     def do_quit(self, arg):
         """Quits out of Interactive Mode."""
