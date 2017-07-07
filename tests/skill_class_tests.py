@@ -2,7 +2,7 @@
 
 import unittest
 
-from classes import Skill
+from classes.skill import Skill
 
 class Test_Skill_Class(unittest.TestCase):
     """ unit tests for the Skill class """
