@@ -19,4 +19,9 @@ class LearningMap:
         pass
 
     def view_skills_not_learnt(self):
-        pass
+        """ returns the skills not learnt """
+        for skill in self.skills_list:
+            if skill.studied:
+                pass
+            else:
+                print skill.name
