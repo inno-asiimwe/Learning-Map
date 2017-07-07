@@ -26,9 +26,3 @@ class LearningMap:
 
 
 
-class Skill(LearningMap):
-
-    def __init__(self):
-
-        self.name
-        self.studied
