@@ -16,9 +16,9 @@ class TestMap(unittest.TestCase):
         list_after = len(self.map.skills_list)
         self.assertEqual([list_before, list_after], [0, 1], msg = "skill should be added to the skills_list")
 
-    def test_skill_is_skill_object(self):
+    def test_add_skill_non_string(self):
         """"""
-        self.assertRaises(TypeError, self.map.add_skill, 'skill', msg = "Input should be a skill object")
+        self.assertRaises(TypeError, self.map.add_skill, 5, msg = "Skill name should be a string")
 
-if __name__ = "__main__":
+if __name__ == '__main__':
     unittest.main()
