@@ -1,7 +1,7 @@
 class Skill():
-    def _init_(self, name,studied):
-        self.name=name
-        self.studied=bolean
+    def _init_(self, name):
+        self.name = name
+        self.studied = False
          
     
         
